@@ -201,12 +201,6 @@
 		/* overflow: auto; */
 	}
 
-	pre {
-		overflow-x: auto;
-		padding: 12px;
-		border-radius: 12px;
-		background-color: rgb(var(--surface-container-high));
-	}
 	.dark {
 		--background: 240 10% 3.9%;
 		--foreground: 0 0% 98%;

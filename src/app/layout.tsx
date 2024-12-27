@@ -27,9 +27,7 @@ export default function RootLayout({
 			<body
 				className={`${geistSans.variable} ${geistMono.variable} antialiased`}
 			>
-				<main className='bg-light-surface md:grid md:grid-cols-8 md:gap-x-6 lg:grid-cols-12'>
-					{children}
-				</main>
+				<main className='bg-light-surface'>{children}</main>
 			</body>
 		</html>
 	);
