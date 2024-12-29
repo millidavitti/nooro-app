@@ -3,8 +3,8 @@ import React from "react";
 
 export default function TaskInfo() {
 	return (
-		<Flex className='w-full justify-center shrink-0'>
-			<Flex flex='column' className='px-0 basis-[736px]'>
+		<Flex className='w-full justify-center shrink-0 p-0'>
+			<Flex flex='column' className='p-0 basis-[736px]'>
 				<Flex className='justify-between px-0'>
 					{/* Tasks */}
 					<Flex flex='row' className='w-fit items-center gap-3 p-0'>
