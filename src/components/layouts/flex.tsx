@@ -29,7 +29,7 @@ export default function Flex({
 			{flex === "row" && (
 				<div
 					className={cn(
-						"flex flex-col outline-2 overflow-x-auto bg-light-surface-surface-container-lowest rounded-lg",
+						"flex flex-row outline-2 overflow-x-auto bg-light-surface-surface-container-lowest rounded-lg",
 						className,
 					)}
 					{...htmlProps}
