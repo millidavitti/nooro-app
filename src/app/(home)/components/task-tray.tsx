@@ -7,13 +7,9 @@ import Tasks from "./tasks";
 export default function TaskTray() {
 	return (
 		<Flex className='h-full w-full justify-center'>
-			<Flex
-				flex='column'
-				className='px-0 basis-[736px] h-full justify-center items-center'
-			>
-				{true && <EmptyTaskTrayMessage />}
-				{false && <Tasks />}
-			</Flex>
+			{false && <EmptyTaskTrayMessage />}
+
+			{true && <Tasks />}
 		</Flex>
 	);
 }
