@@ -18,7 +18,7 @@ export default function Flex({
 			{flex === "column" && (
 				<div
 					className={cn(
-						"flex flex-col p-3 outline-2 overflow-y-auto bg-light-surface-surface-container-lowest rounded-lg",
+						"flex flex-col p-3 outline-2 overflow-y-auto rounded-lg",
 						className,
 					)}
 					{...htmlProps}
@@ -29,7 +29,7 @@ export default function Flex({
 			{flex === "row" && (
 				<div
 					className={cn(
-						"flex flex-row p-3 outline-2 overflow-x-auto bg-light-surface-surface-container-lowest rounded-lg",
+						"flex flex-row p-3 outline-2 overflow-x-auto rounded-lg",
 						className,
 					)}
 					{...htmlProps}
