@@ -33,6 +33,7 @@ export default function CreateEditTask() {
 						<label className='text-[#4EA8DE] font-semibold'>Title</label>
 						<input
 							type='text'
+							required
 							placeholder='Ex. Brush your teeth'
 							className='p-3 outline-none rounded-lg text-white bg-[#262626] placeholder:text-[#333333]'
 						/>
