@@ -3,7 +3,7 @@ import InteractiveIcon from "@/components/layouts/interactive_icon";
 import Button from "@/components/ui/button";
 import { task_form_jotai } from "@/data/atoms/ui_state";
 import { useAtom, useAtomValue } from "jotai";
-import { ArrowLeft, CirclePlus } from "lucide-react";
+import { ArrowLeft, Check, CirclePlus } from "lucide-react";
 import React from "react";
 import Palette from "./palette";
 
@@ -25,6 +25,7 @@ export default function CreateEditTask() {
 					className='flex flex-col gap-3'
 					onSubmit={(e) => {
 						e.preventDefault();
+						task_form_setter(null);
 					}}
 				>
 					{/* Task Title */}
@@ -32,6 +33,7 @@ export default function CreateEditTask() {
 						<label className='text-[#4EA8DE] font-semibold'>Title</label>
 						<input
 							type='text'
+							required
 							placeholder='Ex. Brush your teeth'
 							className='p-3 outline-none rounded-lg text-white bg-[#262626] placeholder:text-[#333333]'
 						/>
@@ -48,7 +50,7 @@ export default function CreateEditTask() {
 						) : (
 							<Button className='flex w-full basis-[736px] p-4 gap-3 justify-center bg-[#1E6F9F] text-white'>
 								Save Task
-								<CirclePlus />
+								<Check />
 							</Button>
 						)}
 					</Flex>
