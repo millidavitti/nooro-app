@@ -1,5 +1,4 @@
 import Flex from "@/components/layouts/flex";
-import Image from "next/image";
 import React from "react";
 import EmptyTaskTrayMessage from "./empty-task-tray-message";
 import Tasks from "./tasks";
