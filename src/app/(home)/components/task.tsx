@@ -1,14 +1,15 @@
 import Flex from "@/components/layouts/flex";
 import InteractiveIcon from "@/components/layouts/interactive_icon";
+import type { Task } from "@/data/atoms/app_data";
 import { task_form_jotai } from "@/data/atoms/ui_state";
 import { useSetAtom } from "jotai";
 import { Check, Trash2 } from "lucide-react";
 import React from "react";
 
-interface Task {
-	task: any;
+interface TaskComponent {
+	task: Task;
 }
-export default function Task({ task }: Task) {
+export default function TaskComponent({ task }: TaskComponent) {
 	const task_form_setter = useSetAtom(task_form_jotai);
 
 	return (
