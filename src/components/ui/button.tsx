@@ -11,7 +11,7 @@ export default function Button({ children, className, onClick, type }: Button) {
 		<button
 			type={type}
 			className={cn(
-				"p-3 py-2 title-medium active:scale-[0.98] transition",
+				"p-3 py-2 title-medium active:scale-[0.98] transition rounded-lg",
 				className,
 			)}
 			onClick={onClick}

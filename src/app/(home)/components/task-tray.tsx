@@ -8,7 +8,6 @@ export default function TaskTray() {
 	return (
 		<Flex className='h-full w-full justify-center'>
 			{false && <EmptyTaskTrayMessage />}
-
 			{true && <Tasks />}
 		</Flex>
 	);
