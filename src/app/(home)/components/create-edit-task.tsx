@@ -1,8 +1,7 @@
 import Flex from "@/components/layouts/flex";
-import InteractiveIcon from "@/components/layouts/interactive_icon";
 import Button from "@/components/ui/button";
 import { task_form_jotai } from "@/data/atoms/ui_state";
-import { useAtom, useAtomValue } from "jotai";
+import { useAtom } from "jotai";
 import { ArrowLeft, Check, CirclePlus } from "lucide-react";
 import React from "react";
 import Palette from "./palette";
