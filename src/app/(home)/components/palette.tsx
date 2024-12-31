@@ -1,6 +1,6 @@
 import Flex from "@/components/layouts/flex";
 import { task_entry_jotai } from "@/data/atoms/app_data";
-import { useAtom, useSetAtom } from "jotai";
+import { useAtom } from "jotai";
 import React from "react";
 
 export default function Palette() {
