@@ -6,7 +6,7 @@ export default function EmptyTaskTrayMessage() {
 	return (
 		<Flex
 			flex='column'
-			className='px-0 basis-[736px] h-full justify-center items-center outline'
+			className='px-0 basis-[736px] h-full justify-center items-center'
 		>
 			<Image src='/clipboard.svg' width={56} height={56} alt='clipboard' />
 			<Flex flex='column' className='items-center'>
