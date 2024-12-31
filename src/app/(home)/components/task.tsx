@@ -1,8 +1,7 @@
 import Flex from "@/components/layouts/flex";
 import InteractiveIcon from "@/components/layouts/interactive_icon";
-import type { Task } from "@/data/atoms/app_data";
-import { task_form_jotai } from "@/data/atoms/ui_state";
-import { useSetAtom } from "jotai";
+import { type Task } from "@/data/atoms/app_data";
+import useTaskInterface from "@/hooks/interface/use-task-interface";
 import { Check, Trash2 } from "lucide-react";
 import React from "react";
 
@@ -10,8 +9,7 @@ interface TaskComponent {
 	task: Task;
 }
 export default function TaskComponent({ task }: TaskComponent) {
-	const task_form_setter = useSetAtom(task_form_jotai);
-
+	const { editTask } = useTaskInterface();
 	return (
 		<Flex className='shrink-0 gap-3 bg-[#262626] w-full text-white items-center cursor-pointer rounded-lg '>
 			{/* Checkbox */}
@@ -20,7 +18,7 @@ export default function TaskComponent({ task }: TaskComponent) {
 			</div>
 			<p
 				className='active:scale-[.99] transition w-full'
-				onClick={() => task_form_setter("edit-task")}
+				onClick={() => editTask(task)}
 			>
 				{task.title}
 			</p>
