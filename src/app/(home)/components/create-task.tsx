@@ -11,7 +11,7 @@ export default function CreateTask() {
 	return (
 		<Flex
 			flex='row'
-			className='p-0 w-full justify-center shrink-0 absolute top-32'
+			className='py-0 w-full justify-center shrink-0 absolute top-32'
 		>
 			<Button
 				onClick={() => task_form_setter("create-task")}
