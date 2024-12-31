@@ -11,7 +11,7 @@ import CreateEditTask from "./create-edit-task";
 export default function Todos() {
 	const task_form = useAtomValue(task_form_jotai);
 	return (
-		<Flex className='items-center w-full h-full bg-[#1A1A1A]' flex='column'>
+		<Flex className='items-center w-full h-full' flex='column'>
 			{!Boolean(task_form) ? (
 				<>
 					<CreateTask />
