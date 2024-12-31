@@ -31,12 +31,12 @@ export default function CreateEditTask() {
 					className='flex flex-col gap-3'
 					onSubmit={(e) => {
 						e.preventDefault();
-						task_form === "create-task"
-							? createTask()
-							: editTask((task_entry as Task).id, {
-									color: task_entry.color,
-									title: task_entry.title,
-							  });
+						if (task_form === "create-task") createTask();
+						else
+							editTask((task_entry as Task).id, {
+								color: task_entry.color,
+								title: task_entry.title,
+							});
 					}}
 				>
 					{/* Task Title */}
