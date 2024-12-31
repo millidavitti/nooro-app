@@ -16,18 +16,23 @@ export default function useTaskInterface() {
 		task_entry_setter(task);
 	}
 	function deleteTask(id: string) {
-		deleteTaskAction(id)
-			.then((status) => {
-				console.log(status);
-				toast.success("Deleted Task");
-				getTasks()
-					.then((tasks) => tasks_setter(tasks))
-					.catch((error) => console.log(error));
-			})
-			.catch((error) => {
-				toast.error("Something went wrong");
-				console.log("---deleteTask---\n", error);
-			});
+		if (
+			confirm(
+				"Are you sure you want to delete this item? This action cannot be undone.",
+			)
+		)
+			deleteTaskAction(id)
+				.then((status) => {
+					console.log(status);
+					toast.success("Deleted Task");
+					getTasks()
+						.then((tasks) => tasks_setter(tasks))
+						.catch((error) => console.log(error));
+				})
+				.catch((error) => {
+					toast.error("Something went wrong");
+					console.log("---deleteTask---\n", error);
+				});
 	}
 	function markTask(id: string, update: Partial<Task>) {
 		editTaskAction(id, update)

@@ -12,29 +12,19 @@ export default function useCreateEditTaskInterface() {
 	function createTask() {
 		task_form_setter(null);
 		task_entry_setter({ color: "", title: "" });
-		createTaskAction(task_entry)
-			.then((status) => {
-				console.log(status);
-				toast.success("Created Task");
-			})
-			.catch((error) => {
-				toast.error("Something went wrong");
-				console.log("---createTask---\n", error);
-			});
+		createTaskAction(task_entry).catch((error) => {
+			toast.error("Something went wrong");
+			console.log("---createTask---\n", error);
+		});
 	}
 
 	function editTask(id: string, update: Partial<TaskEntry>) {
 		task_form_setter(null);
 		task_entry_setter({ color: "", title: "" });
-		editTaskAction(id, update)
-			.then((status) => {
-				console.log(status);
-				toast.success("Updated Task");
-			})
-			.catch((error) => {
-				toast.error("Something went wrong");
-				console.log("---editTask---\n", error);
-			});
+		editTaskAction(id, update).catch((error) => {
+			toast.error("Something went wrong");
+			console.log("---editTask---\n", error);
+		});
 	}
 	return {
 		createTask,
