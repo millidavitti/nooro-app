@@ -1,7 +1,6 @@
 import { Task, task_entry_jotai } from "@/data/atoms/app_data";
 import { task_form_jotai } from "@/data/atoms/ui_state";
 import { useSetAtom } from "jotai";
-import React from "react";
 
 export default function useTaskInterface() {
 	const task_form_setter = useSetAtom(task_form_jotai);
