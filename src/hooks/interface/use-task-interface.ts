@@ -2,7 +2,7 @@ import { deleteTask as deleteTaskAction } from "@/backend/actions/delete-task";
 import { getTasks } from "@/backend/actions/get-tasks";
 import { Task, task_entry_jotai, tasks_jotai } from "@/data/atoms/app_data";
 import { task_form_jotai } from "@/data/atoms/ui_state";
-import { useAtom, useSetAtom } from "jotai";
+import { useSetAtom } from "jotai";
 import { toast } from "sonner";
 
 export default function useTaskInterface() {
