@@ -1,5 +1,6 @@
 import { createTask as createTaskAction } from "@/backend/actions/create-task";
-import { task_entry_jotai } from "@/data/atoms/app_data";
+import { editTask as editTaskAction } from "@/backend/actions/edit-task";
+import { task_entry_jotai, TaskEntry } from "@/data/atoms/app_data";
 import { task_form_jotai } from "@/data/atoms/ui_state";
 import { useAtom } from "jotai";
 import { toast } from "sonner";
@@ -14,15 +15,30 @@ export default function useCreateEditTaskInterface() {
 		createTaskAction(task_entry)
 			.then((status) => {
 				console.log(status);
-				toast.success("Task Created");
+				toast.success("Created Task");
 			})
 			.catch((error) => {
 				toast.error("Something went wrong");
 				console.log("---createTask---\n", error);
 			});
 	}
+
+	function editTask(id: string, update: Partial<TaskEntry>) {
+		task_form_setter(null);
+		task_entry_setter({ color: "", title: "" });
+		editTaskAction(id, update)
+			.then((status) => {
+				console.log(status);
+				toast.success("Updated Task");
+			})
+			.catch((error) => {
+				toast.error("Something went wrong");
+				console.log("---editTask---\n", error);
+			});
+	}
 	return {
 		createTask,
+		editTask,
 		task_form,
 		task_form_setter,
 		task_entry,
