@@ -9,7 +9,7 @@ interface TaskComponent {
 	task: Task;
 }
 export default function TaskComponent({ task }: TaskComponent) {
-	const { editTask } = useTaskInterface();
+	const { editTask, deleteTask } = useTaskInterface();
 	return (
 		<Flex className='shrink-0 gap-3 bg-[#262626] w-full text-white items-center cursor-pointer rounded-lg '>
 			{/* Checkbox */}
@@ -22,7 +22,7 @@ export default function TaskComponent({ task }: TaskComponent) {
 			>
 				{task.title}
 			</p>
-			<InteractiveIcon className='ml-auto'>
+			<InteractiveIcon className='ml-auto' callback={() => deleteTask(task.id)}>
 				<Trash2 className='text-[#808080]' />
 			</InteractiveIcon>
 		</Flex>
