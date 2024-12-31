@@ -1,12 +1,8 @@
 import Flex from "@/components/layouts/flex";
 import Button from "@/components/ui/button";
-import { task_form_jotai } from "@/data/atoms/ui_state";
-import { useAtom } from "jotai";
 import { ArrowLeft, Check, CirclePlus } from "lucide-react";
 import React from "react";
 import Palette from "./palette";
-import { task_entry_jotai } from "@/data/atoms/app_data";
-import { createTask } from "@/backend/actions/create-task";
 import useCreateEditTaskInterface from "@/hooks/interface/use-create-edit-task-interface";
 
 export default function CreateEditTask() {
