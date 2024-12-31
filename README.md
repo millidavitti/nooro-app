@@ -1,3 +1,10 @@
+### Option 1: Use the deployed version
+
+For a seamless experience, use can use the deployed app:  
+[Nooro Task App](https://nooro-app.vercel.app/)
+
+## Option 2. Configure Your Application
+
 1. **Set Up Environment Variables**:  
    Create a `.env` file in your project directory and add the following line:
 
