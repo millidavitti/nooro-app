@@ -24,7 +24,10 @@ export default function CreateEditTask() {
 			>
 				<ArrowLeft
 					className='text-white cursor-pointer active:scale-95'
-					onClick={() => task_form_setter(null)}
+					onClick={() => {
+						task_form_setter(null);
+						task_entry_setter({ color: "", title: "" });
+					}}
 				/>
 				{/* Create or Edit Task Form */}
 				<form
@@ -60,7 +63,6 @@ export default function CreateEditTask() {
 						<input
 							id='color-palette'
 							type='text'
-							required
 							value={task_entry.color}
 							onChange={() => {}}
 							className='absolute bottom-0 z-[-1] p-3 outline-none rounded-lg text-white bg-[#262626] placeholder:text-[#333333]'
