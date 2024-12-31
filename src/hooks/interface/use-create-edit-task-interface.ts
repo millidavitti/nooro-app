@@ -2,7 +2,6 @@ import { createTask as createTaskAction } from "@/backend/actions/create-task";
 import { task_entry_jotai } from "@/data/atoms/app_data";
 import { task_form_jotai } from "@/data/atoms/ui_state";
 import { useAtom } from "jotai";
-import React from "react";
 import { toast } from "sonner";
 
 export default function useCreateEditTaskInterface() {
