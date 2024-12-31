@@ -11,6 +11,7 @@ export async function editTask(id: string, update: Partial<TaskEntry>) {
 			body: JSON.stringify(update),
 			headers,
 		});
+		return await res.json();
 	} catch (error) {
 		console.log("---editTask---\n", error);
 		throw error;
