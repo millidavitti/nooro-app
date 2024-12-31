@@ -1,7 +1,3 @@
-Got it! Here's the content in the specified format:
-
----
-
 1. **Set Up Environment Variables**:  
    Create a `.env` file in your project directory and add the following line:
 
