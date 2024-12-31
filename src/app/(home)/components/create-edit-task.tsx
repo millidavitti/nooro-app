@@ -4,15 +4,18 @@ import { ArrowLeft, Check, CirclePlus } from "lucide-react";
 import React from "react";
 import Palette from "./palette";
 import useCreateEditTaskInterface from "@/hooks/interface/use-create-edit-task-interface";
+import { Task } from "@/data/atoms/app_data";
 
 export default function CreateEditTask() {
 	const {
 		createTask,
+		editTask,
 		task_entry,
 		task_entry_setter,
 		task_form,
 		task_form_setter,
 	} = useCreateEditTaskInterface();
+
 	return (
 		<Flex className='w-full justify-center shrink-0'>
 			<Flex
@@ -28,7 +31,12 @@ export default function CreateEditTask() {
 					className='flex flex-col gap-3'
 					onSubmit={(e) => {
 						e.preventDefault();
-						createTask();
+						task_form === "create-task"
+							? createTask()
+							: editTask((task_entry as Task).id, {
+									color: task_entry.color,
+									title: task_entry.title,
+							  });
 					}}
 				>
 					{/* Task Title */}
@@ -54,7 +62,8 @@ export default function CreateEditTask() {
 							type='text'
 							required
 							value={task_entry.color}
-							className='absolute bottom-0 opacity- z-[-1] p-3 outline-none rounded-lg text-white bg-[#262626] placeholder:text-[#333333]'
+							onChange={() => {}}
+							className='absolute bottom-0 z-[-1] p-3 outline-none rounded-lg text-white bg-[#262626] placeholder:text-[#333333]'
 						/>
 						<Palette />
 					</Flex>
