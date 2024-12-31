@@ -20,6 +20,7 @@ export default function TaskComponent({ task }: TaskComponent) {
 			>
 				{task.completed && <Check size={12} className='stroke-[4px]' />}
 			</div>
+			{/* Task Content */}
 			<p
 				className='active:scale-[.99] transition w-full data-[is-completed=true]:line-through data-[is-completed=true]:text-[#808080]'
 				onClick={() => editTask(task)}
