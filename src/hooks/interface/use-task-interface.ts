@@ -1,12 +1,7 @@
 import { deleteTask as deleteTaskAction } from "@/backend/actions/delete-task";
 import { editTask as editTaskAction } from "@/backend/actions/edit-task";
 import { getTasks } from "@/backend/actions/get-tasks";
-import {
-	Task,
-	task_entry_jotai,
-	TaskEntry,
-	tasks_jotai,
-} from "@/data/atoms/app_data";
+import { Task, task_entry_jotai, tasks_jotai } from "@/data/atoms/app_data";
 import { task_form_jotai } from "@/data/atoms/ui_state";
 import { useSetAtom } from "jotai";
 import { toast } from "sonner";
