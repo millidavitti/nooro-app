@@ -10,3 +10,13 @@ export type Task = {
 };
 
 export const tasks_jotai = atom<Task[]>([]);
+
+export type TaskEntry = {
+	title: string;
+	color: string;
+};
+
+export const task_entry_jotai = atom<TaskEntry>({
+	title: "",
+	color: "",
+});
